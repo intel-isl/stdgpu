@@ -82,7 +82,7 @@ function(stdgpu_cuda_set_architecture_flags STDGPU_OUTPUT_ARCHITECTURE_FLAGS)
     endforeach()
 
     if(NOT STDGPU_CUDA_HAVE_SUITABLE_GPU)
-        message(FATAL_ERROR "No CUDA-capable GPU detected")
+        message(WARNING "No CUDA-capable GPU detected, falling back to the default CUDA architecture")
     endif()
 
     # Make output variable visible
